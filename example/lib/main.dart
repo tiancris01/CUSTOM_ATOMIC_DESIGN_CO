@@ -40,26 +40,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Row(
         children: [
-          MainButton(
-            label: 'Continue',
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('You pressed the button!'),
-                ),
-              );
-            },
+          MainText(
+            content: 'Hello, World!',
           ),
-          const SizedBox(width: 16),
-          MainButton.border(
-            label: 'name',
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('You pressed the button!'),
-                ),
-              );
-            },
+          MainText.title(
+            content: 'Hello, World!',
           ),
         ],
       ),
