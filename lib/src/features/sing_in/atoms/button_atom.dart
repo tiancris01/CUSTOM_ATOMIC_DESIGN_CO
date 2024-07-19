@@ -1,3 +1,5 @@
+import 'package:custom_atomic_design_co/src/foundatiosn/colors_foundation.dart';
+import 'package:custom_atomic_design_co/src/foundatiosn/size_foundations.dart';
 import 'package:flutter/material.dart';
 
 /// Customized button with a label and an onPressed callback.
@@ -56,16 +58,23 @@ class ButtonAtom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final primaryColor = Theme.of(context).colorScheme.primary;
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         // [_hasBorder] is used to determine the button's background color.
-        backgroundColor: _hasBorder ? Colors.white : primaryColor,
-        foregroundColor: _hasBorder ? primaryColor : Colors.white,
+        // here we use the ColorFoundation to get the color.
+        //also SizeFoundations to get the radius.
+        backgroundColor: _hasBorder
+            ? ColorFoundation.background.bgWhite
+            : ColorFoundation.background.bgPrimary,
+        foregroundColor: _hasBorder
+            ? ColorFoundation.background.bgPrimary
+            : ColorFoundation.background.bgWhite,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(SizeFoundations.radius.r_8),
           side: BorderSide(
-            color: _hasBorder ? Colors.black : Colors.transparent,
+            color: _hasBorder
+                ? ColorFoundation.border.borderDark
+                : Colors.transparent,
             width: _hasBorder ? 1 : 0,
           ),
         ),
