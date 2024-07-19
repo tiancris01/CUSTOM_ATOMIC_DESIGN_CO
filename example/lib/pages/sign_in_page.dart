@@ -10,13 +10,13 @@ class SignInPage extends StatelessWidget {
       title: 'Sign In',
       signInCardInputParams: const SignInCardInputParams(
         emailText: 'E-mail:',
-        emailTextFieldHint: 'Digite seu E-mail',
-        passwordText: 'Senha',
-        passwordTextFieldHint: 'Digite sua Senha',
+        emailTextFieldHint: 'Enter your e-mail',
+        passwordText: 'Password:',
+        passwordTextFieldHint: 'Enter your password',
       ),
       signInCardButtonParams: SignInCardButtonParams(
-        forgotPasswordText: 'Esqueci a senha',
-        buttonText: 'Entrar',
+        forgotPasswordText: 'Forgot Password?',
+        buttonText: 'Sign In',
         onForgotPasswordTap: () {},
         onButtonTap: () {},
       ),
