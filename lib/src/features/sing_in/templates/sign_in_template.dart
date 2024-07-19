@@ -1,3 +1,4 @@
+import 'package:custom_atomic_design_co/src/features/sing_in/atoms/app_bar_atom.dart';
 import 'package:custom_atomic_design_co/src/features/sing_in/organisms/sign_in_card_organism.dart';
 import 'package:custom_atomic_design_co/src/foundatiosn/size_foundations.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class SignInTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBarAtom.transparent(title: title),
+      appBar: AppBarAtom(title: title) as PreferredSizeWidget,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(SizeFoundations.size.w_16),
