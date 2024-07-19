@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// Customized button with a label and an onPressed callback.
 /// The button can have a border or not.
 /// This is the main button used in the app.
-class MainButton extends StatelessWidget {
+class ButtonAtom extends StatelessWidget {
   /// Constructor for the MainButton. the button has no border.
   /// [label] and [onPressed] are both required.
   /// [label] is the text displayed on the button.
@@ -19,7 +19,7 @@ class MainButton extends StatelessWidget {
   ///  },
   ///),
   /// ```
-  const MainButton({
+  const ButtonAtom({
     super.key,
     required String label,
     required VoidCallback onPressed,
@@ -42,7 +42,7 @@ class MainButton extends StatelessWidget {
   ///  },
   ///),
   /// ```
-  const MainButton.border({
+  const ButtonAtom.border({
     super.key,
     required String label,
     required VoidCallback onPressed,

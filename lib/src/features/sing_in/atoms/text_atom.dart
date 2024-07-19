@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 /// MainText is a custom widget that displays text in the app.
-/// use [MainText] for regular text and [MainText.title] for title text.
-class MainText extends StatelessWidget {
+/// use [TextAtom] for regular text and [MainText.title] for title text.
+class TextAtom extends StatelessWidget {
   final String _content;
   final bool _isTitle;
 
-  /// Creates a [MainText] widget.
+  /// Creates a [TextAtom] widget.
   /// [content] is the text to be displayed and is required.
-  /// [MainText] is used for regular text.
+  /// [TextAtom] is used for regular text.
   ///
   /// Example:
   /// ```dart
@@ -16,7 +16,7 @@ class MainText extends StatelessWidget {
   ///   content: 'Hello, World!',
   /// )
   /// ```
-  const MainText({
+  const TextAtom({
     super.key,
     required String content,
   })  : _isTitle = false,
@@ -32,7 +32,7 @@ class MainText extends StatelessWidget {
   ///    content: 'Hello, World!',
   /// )
   /// ```
-  const MainText.title({
+  const TextAtom.title({
     super.key,
     required String content,
   })  : _isTitle = true,
