@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 /// This is the main button used in the app.
 class ButtonAtom extends StatelessWidget {
   /// Constructor for the MainButton. the button has no border.
-  /// [label] and [onPressed] are both required.
-  /// [label] is the text displayed on the button.
+  ///  [onPressed] and [child] are  required.
+  /// is the text displayed on the button.
   /// [onPressed] is the callback function when the button is pressed.
   ///
   /// example:
@@ -23,15 +23,15 @@ class ButtonAtom extends StatelessWidget {
   /// ```
   const ButtonAtom({
     super.key,
-    required String label,
+    required Widget child,
     required VoidCallback onPressed,
-  })  : _label = label,
+  })  : _child = child,
         _hasBorder = false,
         _onPressed = onPressed;
 
   /// This constructor is used when the button has a border.
-  /// [label] and [onPressed] are both required.
-  /// [label] is the text displayed on the button.
+  ///  [onPressed] and [child] are  required.
+  /// is the text displayed on the button.
   /// [onPressed] is the callback function when the button is pressed.
   ///
   /// example:
@@ -46,13 +46,14 @@ class ButtonAtom extends StatelessWidget {
   /// ```
   const ButtonAtom.border({
     super.key,
+    required Widget child,
     required String label,
     required VoidCallback onPressed,
-  })  : _label = label,
+  })  : _child = child,
         _hasBorder = true,
         _onPressed = onPressed;
 
-  final String _label;
+  final Widget _child;
   final bool _hasBorder;
   final VoidCallback _onPressed;
 
@@ -80,7 +81,7 @@ class ButtonAtom extends StatelessWidget {
         ),
       ),
       onPressed: _onPressed,
-      child: Text(_label),
+      child: _child,
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:custom_atomic_design_co/custom_atomic_design_co.dart';
 import 'package:custom_atomic_design_co/src/features/sing_in/molecules/sign_input_molecule.dart';
+import 'package:custom_atomic_design_co/src/features/sing_in/templates/params/params.dart';
 import 'package:custom_atomic_design_co/src/foundatiosn/size_foundations.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class SignInCardOrganism extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(AppSizes.r_16),
+        padding: EdgeInsets.all(SizeFoundations.radius.r_16),
         child: Column(
           children: [
             SignInInputMolecule(
