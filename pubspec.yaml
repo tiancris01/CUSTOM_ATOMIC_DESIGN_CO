@@ -1,10 +1,10 @@
 name: custom_atomic_design_co
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+homepage: https://example.com
 
 environment:
-  sdk: '>=3.3.4 <4.0.0'
+  sdk: ">=3.3.4 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
