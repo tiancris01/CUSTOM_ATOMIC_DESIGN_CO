@@ -1,4 +1,5 @@
 import 'package:custom_atomic_design_co/custom_atomic_design_co.dart';
+import 'package:example/pages/sign_in_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,39 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: appLightTheme,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: const Column(
-        children: [
-          TextFieldAtom(
-            hintText: 'Email',
-            keyboardType: TextInputType.emailAddress,
-          ),
-          TextFieldAtom.password(
-            hintText: 'Password',
-            isPassword: true,
-          ),
-        ],
-      ),
+      home: const SignInPage(),
     );
   }
 }
