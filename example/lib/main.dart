@@ -38,13 +38,15 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Row(
+      body: const Column(
         children: [
-          MainText(
-            content: 'Hello, World!',
+          TextFieldAtom(
+            hintText: 'Email',
+            keyboardType: TextInputType.emailAddress,
           ),
-          MainText.title(
-            content: 'Hello, World!',
+          TextFieldAtom.password(
+            hintText: 'Password',
+            isPassword: true,
           ),
         ],
       ),
